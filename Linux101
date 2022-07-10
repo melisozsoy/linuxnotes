@@ -1,1 +1,57 @@
-mnbmnbmnbnmbmnb
+Nerelerde kullanır?
+-Web Sunucuları
+-Depolama Sistemleri
+-Veri İşlemi
+-Kurumsal IT Sistemleri
+
+Terminal Ortamı: İşletim sistemi çekirdeği ile kullanıcı arası iletişimi sağlar. Kabuk ile etkileşime geçmek için kullanılan arabirimdir.
+whoami: Oturum açan kullanıcı ismini yazar.
+uname -a: Bilgisayarın sistem özelliklerini yazar.
+ping -c4 xxxxx.com: xxxxx.com adresine 4 kez ping atar.
+~: Kullanıcı ana dizini. (İşlem yapmakta olduğumuz klasör.)
+$: Oturum açan kullanıcının normal kullanıcı haklarıyla işlem yaptığını belirtir.
+date: Tarih ve saati yazan komuttur.
+ls: İçinde bulunduğumuz klasörün içindeki dosya ve klasörleri listeler.
+
+Sadece komutlar yeterli değil, parametreler de kullanılıyor.
+ls -a: Bütün gizli dosyaları gösterir. (Başında "." varsa gizli demektir.)
+ls -l: Dosyaları dizin içerisinde listeli bir şekilde gösteriyor. 
+Değiştirilen dosyanın son ne zaman ve kim tarafından değiştirildiği, yazma izinleri vb. ayrıntılar yer alır.
+pwd: İçinde bulunulan dizini gösteren komuttur.
+cd: (change directory) Farklı bir dizinin içerisine gidebilmek için kullandığımız komuttur.
+cd .. : Bir önceki üst dizine dönmemizi sağlayan komuttur.
+TAB: Gitmek istediğin klasör isminin devamını tamamlayan tuştur.
+man: Kılavuzu bulunan komut ve programların kılavuzlarını okur.
+man ls: ls komutunun ne işe yaradığı, hangi parametrelerle birlikte kullanıldığını gösterir. 
+Kılavuzdan "Q" tuşu kullanılarak çıkılır.
+history: Komut satırı geçmişini gösterir. Bilgisayar kapansa bile biz silene kadar silinmez.
+history -c: (clean) Komut satırı geçmişini temizler.
+
+LİNUX DOSYA SİSTEMİ:
+*Linux'ta her şey bir dosyadır.
+
+Dosyalar: (-)
+Dizinler (Klasörler): (d)
+Bağlantılar: (l)
+(Linux'ta hepsi dosya olarak depolanır.)
+
+*Linux'ta dosya sistemi hiyerarşiktir. (kök dizin içinde iç içe)
+/: Kök dizin. Tüm dizinleri içeren dizindir. Hiyerarşinin başladığı yerdir. Daha üst bir klasör yok.
+
+KÖK DİZİN ALTINDA BULUNAN DİZİNLER: 
+/bin: temel kullanıcı komutları
+/dev: (device) cihaz dosyaları
+/home: kullanıcı ana dizinleri
+/mnt: Sistemimize bağladığımız aygıtların içerisindeki dosyalara ulaşırız.
+/boot: açılıştaki statik dosyalar
+/etc: sisteme özel ayarlar
+/lib: temel kütüphaneler ve çekirdek modülleri
+/srv: servis dosyaları
+/media: çıkarılabilir ortam dosyaları (USB bellek, CD içerisi dosyalara buradan ulaşabilirsin.)
+/tmp: (temporary) geçici dosyalar
+/var: çalışan dosyalarla ilgili bilgiler
+/root: root kullanıcısı için ana dizin
+
+
+
+
