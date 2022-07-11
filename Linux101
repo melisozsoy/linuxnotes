@@ -134,6 +134,7 @@ head liste.txt: liste.txt isimli dosyanın ilk 10 satırını ekrana yazdırır.
 tail: Dosyanın son satırlarını ekrana yazdıran komuttur.
 tail -n4 liste.txt: liste.txt isimli dosyanın son 4 satırını ekrana yazdırır.
 (Parametre kullanmazsak varsayılan olarak son 10 satırı okur.
+tail -f: Dosyayı canlı olarak izleyebilmemizi sağlar. Listeledikten sonra program durmaz, dosyayı okumaya devam eder.
 
 DOSYA DÜZENLEME:
 vi komutu vim metin editörünü çağırmak için kullanılır.
