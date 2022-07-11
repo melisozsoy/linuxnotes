@@ -18,7 +18,7 @@ ls -a: Bütün gizli dosyaları gösterir. (Başında "." varsa gizli demektir.)
 ls -l: Dosyaları dizin içerisinde listeli bir şekilde gösteriyor. 
 Değiştirilen dosyanın son ne zaman ve kim tarafından değiştirildiği, yazma izinleri vb. ayrıntılar yer alır.
 pwd: İçinde bulunulan dizini gösteren komuttur.
-cd: (change directory) Farklı bir dizinin içerisine gidebilmek için kullandığımız komuttur.
+cd: (change directory) Farklı bir dizinin içine gidebilmek için kullandığımız komuttur.
 cd .. : Bir önceki üst dizine dönmemizi sağlayan komuttur.
 TAB: Gitmek istediğin klasör isminin devamını tamamlayan tuştur.
 man: Kılavuzu bulunan komut ve programların kılavuzlarını okur.
@@ -26,6 +26,7 @@ man ls: ls komutunun ne işe yaradığı, hangi parametrelerle birlikte kullanı
 Kılavuzdan "Q" tuşu kullanılarak çıkılır.
 history: Komut satırı geçmişini gösterir. Bilgisayar kapansa bile biz silene kadar silinmez.
 history -c: (clean) Komut satırı geçmişini temizler.
+clear: Terminal penceresini temizler.
 
 LİNUX DOSYA SİSTEMİ:
 *Linux'ta her şey bir dosyadır.
@@ -52,6 +53,53 @@ KÖK DİZİN ALTINDA BULUNAN DİZİNLER:
 /var: çalışan dosyalarla ilgili bilgiler
 /root: root kullanıcısı için ana dizin
 
+DOSYA SİSTEMİNDE GEZİNME VE LİSTELEME:
+cd -: Bir önceki bulunulan dizine gitmeyi sağlar.
+mkdir: dizin oluşturma (mkdir klasör1: klasör1 isimli bir dizin oluşturduk.)
+touch: dizin içinde yeni bir dosya oluşturma (touch dosya1.txt: dosya1.txt dosyası oluştu.)
+Tek satırda birden fazla dosya ve dizin oluşturulabilir.
 
+DOSYA VE DİZİN SİLME:
+rm dosya1.txt: dosya1.txt dosyasını sildik (rm: remove)
+Tek satırda birden fazla dosya silinebilir.
+Terminalde silinen dosya geri dönüşüm kutusunda bulunamaz.
 
+Sadece rm komutuyla klasör silemeyiz. Parametre de kullanmamız gerekir.
+rm -r klasör1: klasör1 isimli klasörü (içindeki dosya ve klasörlerle birlikte) silindi.
+rm -r ile tek satırda birden fazla klasör silebilirsin.
 
+DOSYA VE DİZİNLERİ KOPYALAMA:
+Dosya Kopyalama:
+cp komutu kullanılır. (copy)
+cp dosya1.xls yenidosya.xls: dosya1.xls isimli dosyayı yenidosya.xls ismiyle kopyaladık.
+cp dosya1.xls dosyalarım/: dosya1.xls isimli dosyayı aynı isimle dosyalarım isimli klasörün içine kopyaladık.
+cp dosya1.xls ../: dosya1.xls isimli dosyayı bir üst dizine kopyaladık.
+cp/home/user/dosyalarım/dosya1.pdf /tmp/dosya2.pdf: dosya1.pdf isimli dosyayı, geçici dosyaların tutulduğu dizine dosya2.pdf ismiyle kopyaladık.
+
+Dizin Kopyalama:
+cp -r dosyalarım/ dosyalarımyeni/: dosyalarım isimli dizini içindeki dosyalarla birlikte dosyalarımyeni isimli dizinin içine kopyaladık.
+
+DOSYA VE DİZİNLERİ TAŞIMA: 
+Dosya Taşıma:
+mv komutu kullanılır. (move)
+mv odev.docx odevlerim/: odev.docx isimli dosyayı odevlerim isimli klasörün içine taşıdık.
+Bir klasöre birden fazla dosyayı tek satırda taşıyabiliriz.
+
+Dizin Taşıma: 
+mv odevlerim/ okul/: odevlerim dizinini (içindeki dosya ve klasörlerle birlikte) okul dizininin altına taşıdık.
+
+DOSYA VE DİZİNLERİ YENİDEN İSİMLENDİRME:
+Aslında aynı klasörün içine farklı bir isimle taşımış oluyoruz. Bu yüzden mv komutunu kullanıyoruz.
+
+Dosya Adı Değiştirme: 
+mv belge.pdf yenibelge.pdf: belge.pdf isimli dosyanın ismini yenibelge.pdf olarak değiştirdik.
+mv belge.pdf belgelerim/yenibelge.pdf: belge.pdf isimli dosyayı yenibelge.pdf ismiyle belgelerim klasörünün içine kaydettik.
+
+Dizin Adı Değiştirme: 
+mv belgelerim/ belgelerim2/: belgelerim isimli klasörün ismini belgelerim2 olarak değiştirdik.
+
+DOSYA VE DİZİNLERİ ARŞİVLEME VE ARŞİVDEN ÇIKARMA:
+arşivleme: sıkıştırma
+tar komutu kullanılır.
+
+Dosya Arşivleme: 
