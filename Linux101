@@ -126,6 +126,15 @@ cat -n: Satırları, her bir satırın başına o satırın sıra numarasını y
 cat -E: Satır sonlarını "&" işareti ile belirtir. 
 tac: cat'in tersidir. Liste sondan başa doğru sıralanır.
 
+head: Dosyanın ilk satırlarını ekrana yazdıran komuttur.
+head -n5 liste.txt: liste.txt isimli dosyanın ilk 5 satırını ekrana yazdırır.
+(Parametre kullanmazsak varsayılan olarak ilk 10 satırı okur.)
+head liste.txt: liste.txt isimli dosyanın ilk 10 satırını ekrana yazdırır.
+
+tail: Dosyanın son satırlarını ekrana yazdıran komuttur.
+tail -n4 liste.txt: liste.txt isimli dosyanın son 4 satırını ekrana yazdırır.
+(Parametre kullanmazsak varsayılan olarak son 10 satırı okur.
+
 DOSYA DÜZENLEME:
 vi komutu vim metin editörünü çağırmak için kullanılır.
 vim üzerinde aynı zamanda komut da çalıştırabiliriz.
