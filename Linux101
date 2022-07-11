@@ -121,7 +121,7 @@ Dosya içinde bir kelimeyi aramak istiyorsak Ctrl+W tuş kombinasyonunu kullanı
 Aratılan kelime birden fazla yerde geçiyorsa bizi ilk geçen yere götürecek. 
 Eğer daha sonraki yerlerde geçenleri de görmek istiyorsak Alt+W tuş kombinasyonunu kullanırız.
 
-cat dosya.txt: Bu komut ile dosya.txt dosyasının içinde ne yazdığını görüntülüyoruz.
+cat dosya.txt: Bu komut ile dosya.txt dosyasının içinde ne yazdığını görüntülüyoruz. Tek seferde birden fazla dosyanın içeriğini görüntüleyebiliriz.
 
 DOSYA DÜZENLEME:
 vi komutu vim metin editörünü çağırmak için kullanılır.
