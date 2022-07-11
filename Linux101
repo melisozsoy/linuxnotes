@@ -65,7 +65,7 @@ Tek satırda birden fazla dosya silinebilir.
 Terminalde silinen dosya geri dönüşüm kutusunda bulunamaz.
 
 Sadece rm komutuyla klasör silemeyiz. Parametre de kullanmamız gerekir.
-rm -r klasör1: klasör1 isimli klasörü (içindeki dosya ve klasörlerle birlikte) silindi.
+rm -r klasör1: klasör1 isimli klasörü silindi.
 rm -r ile tek satırda birden fazla klasör silebilirsin.
 
 DOSYA VE DİZİNLERİ KOPYALAMA:
@@ -77,7 +77,7 @@ cp dosya1.xls ../: dosya1.xls isimli dosyayı bir üst dizine kopyaladık.
 cp/home/user/dosyalarım/dosya1.pdf /tmp/dosya2.pdf: dosya1.pdf isimli dosyayı, geçici dosyaların tutulduğu dizine dosya2.pdf ismiyle kopyaladık.
 
 Dizin Kopyalama:
-cp -r dosyalarım/ dosyalarımyeni/: dosyalarım isimli dizini içindeki dosyalarla birlikte dosyalarımyeni isimli dizinin içine kopyaladık.
+cp -r dosyalarım/ dosyalarımyeni/: dosyalarım isimli dizini dosyalarımyeni isimli dizinin içine kopyaladık.
 
 DOSYA VE DİZİNLERİ TAŞIMA: 
 Dosya Taşıma:
@@ -86,7 +86,7 @@ mv odev.docx odevlerim/: odev.docx isimli dosyayı odevlerim isimli klasörün i
 Bir klasöre birden fazla dosyayı tek satırda taşıyabiliriz.
 
 Dizin Taşıma: 
-mv odevlerim/ okul/: odevlerim dizinini (içindeki dosya ve klasörlerle birlikte) okul dizininin altına taşıdık.
+mv odevlerim/ okul/: odevlerim dizinini okul dizininin altına taşıdık.
 
 DOSYA VE DİZİNLERİ YENİDEN İSİMLENDİRME:
 Aslında aynı klasörün içine farklı bir isimle taşımış oluyoruz. Bu yüzden mv komutunu kullanıyoruz.
@@ -103,3 +103,32 @@ arşivleme: sıkıştırma
 tar komutu kullanılır.
 
 Dosya Arşivleme: 
+tar -zcvf arsiv.tar dosya.xls: dosya.xls isimli dosyayı arsiv.tar dosyasının içine sıkıştırdık. (Eski dosya kaybolmaz, silinmez.)
+Tek satırda birden fazla dosya da sıkıştırabilirdik.
+
+Dizin Arşivleme: 
+tar -zcvf arsiv2.tar belgelerim/: belgelerim dizini arsiv2.tar içine sıkıştırıldı.
+
+Arşivden Çıkarma: 
+tar -zxvf arsiv.tar: arsiv.tar dosyasının içeriğini çıkarıp dışarı kopyaladık.
+
+NANO İLE DOSYA DÜZENLEME:
+Nano bir metin düzenleyicisidir.
+nano metin.txt
+Bu komutla terminal üzerinde yeni bir pencere açılıyor. metin.txt isimli dosyanın içine yazmak istediklerimizi yazıyoruz. Çıkmak istediğimizde Ctrl+X ile çıkıyoruz.
+Dosyayı farklı bir isimle de kaydedebiliriz. Bunun için Ctrl+O tuş kombinasyonunu kullanmamız gerekir. (Eski haliyle beraber iki ayrı dosya halinde kaydolur.)
+Dosya içinde bir kelimeyi aramak istiyorsak Ctrl+W tuş kombinasyonunu kullanırız. 
+Aratılan kelime birden fazla yerde geçiyorsa bizi ilk geçen yere götürecek. 
+Eğer daha sonraki yerlerde geçenleri de görmek istiyorsak Alt+W tuş kombinasyonunu kullanırız.
+
+cat dosya.txt: Bu komut ile dosya.txt dosyasının içinde ne yazdığını görüntülüyoruz.
+
+DOSYA DÜZENLEME:
+vi komutu vim metin editörünü çağırmak için kullanılır.
+vim üzerinde aynı zamanda komut da çalıştırabiliriz.
+Bunun için ":" kullanırız. Bu şekilde komut satırına gideriz.
+Çıkmak için ise ":qa" kullanırız. Ctrl+X kombinasyonu burada işe yaramaz.
+
+Gedit programı, grafik arabirimine sahip bir metin editörüdür.
+
+gedit dosya.txt: dosya.txt isimli dosyayı açarız. Terminal üzerinde çalışmaz, ayrı bir pencere açar.
