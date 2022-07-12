@@ -173,3 +173,31 @@ Eğer sıralı değilse sırayı bozan ilk satırı gösterir.
 sort -r: (reverse) Tersten sıralamak istediğimizde sort komutunu -r parametresiyle birlikte kullanmamız gerekir.
 
 sort -k 3 -r metin.txt: Listeyi 3.sütuna göre tersten olacak şekilde sıralar. -k ve -r parametrelerini birlikte kullanabiliriz.
+Eğer listenin sıralı halini kaydetmek istiyorsak -o parametresini kullanmamız gerekir.
+
+sort -k 3 -r metin.txt -o siralimetin.txt: metin.txt isimli dosyanın üçüncü sütuna göre tersten sıralanmış halini siralimetin.txt ismiyle kaydetmemizi sağlar.
+
+Eğer listeyi rastgele karışık bir şekilde sıralamak istiyorsak sort komutunu -R (random) parametresiyle birlikte kullanmamız gerekir.
+sort -R siralimetin.txt
+
+DOSYA İÇİNDE ARAMA YAPMA:
+grep 'Ayşe' metin.txt: metin.txt isimli dosyada "Ayşe" isminin geçtiği satırları ekrana yazdırır ve "Ayşe" isimlerini kırmızı ile işaretler.
+
+Arama yaparken kelime arama şartı yoktur. Harf veya hece de aranabilir.
+Arma yaparken büyük-küçük harf duyarlılığına dikkat etmemiz gerekir.
+grep 'M' metin.txt: Metinde "M" harfinin geçtiği yerleri gösterir.
+grep -i 'M' metin.txt: Metinde "M" ve "m" harflerinin geçtiği yerleri gösterir. (Büyük-küçük harf duyarlılığını -i parametresi kullanarak devre dışı bıraktık.)
+
+Eğer aradığımız kelime, hece veya harfin geçmediği yerleri görmek istiyorsak grep komutunu -v parametresi ile birlikte kullanmamız gerekir.
+grep -v 'Me' metin.txt: metin.txt isimli dosyada "Me" hecesinin geçmediği satırları gösterir.
+
+grep -i 'M' -v metin.txt: metin.txt isimli dosyada "M" ve "m" harflerinin geçmediği satırları gösterir.
+
+Birden kelimeyi, heceyi veya harfi birden fazla dosya içerisinde arayabiliriz.
+grep -i 'kalem' metin.txt dosya.txt kelimeler.txt
+
+Eğer aradığımız kelime, hece veya harfin hangi satırda geçtiğini öğrenmeden sadece hangi dosyalarda geçtiğini öğrenmek istiyorsak -l parametresini kullanırız.
+grep -i 'kalem' -l metin.txt dosya.txt kelimeler.txt 
+
+Eğer aradığımız kelime, hece veya harfin kaç yerde geçtiğini öğrenmek istiyorsak -c parametresini kullanmamız gerekir.
+grep -i 'kalem' -c metin.txt
