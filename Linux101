@@ -136,6 +136,12 @@ tail -n4 liste.txt: liste.txt isimli dosyanın son 4 satırını ekrana yazdır�
 (Parametre kullanmazsak varsayılan olarak son 10 satırı okur.
 tail -f: Dosyayı canlı olarak izleyebilmemizi sağlar. Listeledikten sonra program durmaz, dosyayı okumaya devam eder.
 
+more: Terminal ekranına sığmayan metinlerin okunmasında kolaylık sağlar.
+(Metnin ekrana sığdığı kadarlık kısmı görüntülenir, devamını görüntülemek için ENTER tuşuna basılarak aşağı satırlara inilir.)
+more komutu kullandığımızda metnin tamamını okumamıza gerek yok. Q tuşu kullanarak çıkabiliriz.
+
+nl: Boş olan satırlar haricindeki her satıra satır numarası eklemeye yarayan komuttur.
+
 DOSYA DÜZENLEME:
 vi komutu vim metin editörünü çağırmak için kullanılır.
 vim üzerinde aynı zamanda komut da çalıştırabiliriz.
@@ -145,3 +151,20 @@ Bunun için ":" kullanırız. Bu şekilde komut satırına gideriz.
 Gedit programı, grafik arabirimine sahip bir metin editörüdür.
 
 gedit dosya.txt: dosya.txt isimli dosyayı açarız. Terminal üzerinde çalışmaz, ayrı bir pencere açar.
+
+DOSYA HAKKINDA BİLGİ EDİNME:
+file: dosyanın türü hakkında bilgi edinmeye yarayan komuttur.
+
+wc metin.txt
+12 54 198 metin.txt : wc komutunu kullanarak metin.txt belgesinin sırasıyla satır sayısı, kelime sayısı ve boyut (byte) bilgilerini öğrendik.
+wc -w metin.txt: metin.txt isimli dosyanın sadece kelime sayısını öğrenmek istiyorsak wc komutunu -w parametresiyle birlikte kullanmalıyız. 
+wc -l metin.txt: metin.txt isimli dosyanın sadece satır sayısını öğrenmek istiyorsak wc komutunu -l parametresiyle birlikte kullanmalıyız.
+wc -c metin.txt: metin.txt isimli dosyanın sadece byte cinsinden boyutunu öğrenmek istiyorsak wc komutunu -c parametresiyle birlikte kullanmalıyız.
+wc -L metin.txt: metin.txt isimli dosyanın en uzun satırının kaç harften oluştuğunu öğrenmek istiyorsak wc komutunu -L parametresiyle birlikte kullanmalıyız.
+
+VERİ SIRALAMA:
+sort komutu kullanılır.
+Eğer ilk sütuna göre değil de başka bir sütuna göre sıralama yapmak istiyorsak -k parametresini kullanmamız gerekir.
+
+sort -k 2 metin.txt: metni ikinci sütuna göre sıralar.
+sort -k 5 metin.txt: metni beşinci sütuna göre sıralar.
