@@ -168,3 +168,8 @@ Eğer ilk sütuna göre değil de başka bir sütuna göre sıralama yapmak isti
 
 sort -k 2 metin.txt: metni ikinci sütuna göre sıralar.
 sort -k 5 metin.txt: metni beşinci sütuna göre sıralar.
+sort -c metin.txt: sort komutunu -c parametresiyle birlikte kullanarak bir listenin sıralı olup olmadığını öğrenebiliriz.
+Eğer sıralı değilse sırayı bozan ilk satırı gösterir.
+sort -r: (reverse) Tersten sıralamak istediğimizde sort komutunu -r parametresiyle birlikte kullanmamız gerekir.
+
+sort -k 3 -r metin.txt: Listeyi 3.sütuna göre tersten olacak şekilde sıralar. -k ve -r parametrelerini birlikte kullanabiliriz.
